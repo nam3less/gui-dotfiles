@@ -1,0 +1,132 @@
+[colors]
+background = #99000000
+background-alt = #444
+
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c4
+
+[bar/left]
+monitor = HDMI-A-0
+
+width = 1920
+height = 26
+
+; use transparent borders to get the padding right
+; disable the bottom one to get a consistent spacing
+border-size = 20
+border-bottom-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+# over-/underline settings
+line-size = 2
+
+background = ${colors.background}
+
+modules-left = i3
+modules-center = date
+modules-right = wifi
+
+tray-position = right
+
+font-0 = "Hack:size13;2"
+font-1 = "FontAwesome:size14;2"
+
+[bar/right]
+monitor = DVI-D-0
+
+width = 1280
+height = 26
+
+; use transparent borders to get the padding right
+; disable the bottom one to get a consistent spacing
+border-size = 20
+border-bottom-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+# over-/underline settings
+line-size = 2
+
+background = ${colors.background}
+
+modules-left = i3
+modules-center = date
+modules-right = wifi
+
+font-0 = "Hack:size13;2"
+font-1 = "FontAwesome:size14;2"
+
+
+[global/wm]
+monitor =
+margin-bottom = 0
+margin-top = 0
+
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+
+; configure general workspace settings
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+
+; configure labels
+
+label-mode = %mode%
+label-mode-foreground = #40c057
+
+label-focused = %name%
+label-focused-padding = 2
+label-focused-background = #88000000
+label-focused-underline = #ddd
+
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+label-occupied = %name%
+label-occupied-padding = 2
+
+label-visible = %name%
+label-visible-padding = 2
+label-visible-background = #88000000
+
+label-urgent = %name%
+label-urgent-padding = 2
+label-urgent-underline = #c92a2a
+
+label-empty = %name%
+label-empty-padding = 2
+label-empty-foreground = #44ffffff
+
+
+[module/wifi]
+type = internal/network
+interface = wlp3s0
+
+label-connected = %essid%
+label-connected-foreground = #eefafafa
+
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %H:%M:%S
+data-alt = %d-%m-%Y
+format-padding = 2
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...% %{B- -o -u}
