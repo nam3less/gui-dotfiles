@@ -8,6 +8,32 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c4
 
+[bar/laptop]
+monitor = eDP1
+width = 1600
+height = 26
+
+border-size = 10
+border-bottom-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+line-size = 2
+
+background = ${colors.background}
+
+modules-left = i3
+modules-center = date
+modules-right = wifi
+
+tray-position = right
+
+font-0 = "Hack:size13;2"
+font-1 = "FontAwesome:size14;2"
+
+
 [bar/left]
 monitor = HDMI-A-0
 
@@ -16,7 +42,7 @@ height = 26
 
 ; use transparent borders to get the padding right
 ; disable the bottom one to get a consistent spacing
-border-size = 20
+border-size = 10
 border-bottom-size = 0
 border-color = #00000000
 
@@ -45,7 +71,7 @@ height = 26
 
 ; use transparent borders to get the padding right
 ; disable the bottom one to get a consistent spacing
-border-size = 20
+border-size = 10
 border-bottom-size = 0
 border-color = #00000000
 

@@ -3,9 +3,9 @@
 exec --no-startup-id "setxkbmap -layout de,us"
 
 # Initiate all the glorious glamour
-exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
+exec_always --no-startup-id ~/.config/polybar/polybar.sh
 exec --no-startup-id compton --config ~/.config/compton.conf
-exec --no-startup-id "feh --no-fehbg --bg-fill ~/Wallpapers/female_deathknight.jpg --bg-fill ~/Wallpapers/sylvanas_sketch.jpg"
+exec --no-startup-id "feh --no-fehbg --bg-fill ~/Wallpapers/female_deathknight.jpg --bg-fill ~/Wallpapers/sylvanas-sketch.jpg"
 
 set $mod Mod4
 
@@ -73,6 +73,10 @@ bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+
+# enable and disable gaps on the fly
+bindsym $mod+g gaps inner all set 10
+bindsym $mod+Shift+g gaps inner all set 0
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -188,7 +192,7 @@ assign [class="discord"] $workspace8
 new_window pixel 0
 
 # manage the eye candy
-gaps inner 20
+gaps inner 10
 
 # =============================================================================
 # Resize Mode
