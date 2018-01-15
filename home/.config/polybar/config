@@ -26,12 +26,14 @@ background = ${colors.background}
 
 modules-left = i3
 modules-center = date
-modules-right = wifi
+modules-right = wifi battery
+
+module-margin = 1
 
 tray-position = right
 
-font-0 = "Hack:size13;2"
-font-1 = "FontAwesome:size14;2"
+font-0 = "Hack:size12;2"
+font-1 = "FontAwesome:size13;2"
 
 
 [bar/left]
@@ -138,7 +140,7 @@ label-empty-foreground = #44ffffff
 
 [module/wifi]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 
 label-connected = %essid%
 label-connected-foreground = #eefafafa
@@ -156,3 +158,9 @@ format-padding = 2
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...% %{B- -o -u}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+

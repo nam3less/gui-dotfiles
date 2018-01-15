@@ -1,12 +1,12 @@
-rofi.mode: window,drun,ssh
+rofi.mode: window,run,ssh
 rofi.font: Hack 13
 
 rofi.color-enabled: true
 
 !                  BACKGROUND     BORDER         SEPERATOR
-rofi.color-window: argb:99000000, argb:00000000  #dfdfdf
+rofi.color-window: argb:99000000, #000000,       #dfdfdf
 
 !                  BG            FG       Alt-BG        Hl-BG          Hl-FG
 rofi.color-normal: argb:0000000, #dfdfdf, argb:00000000, argb:99000000, #fd7e14
 rofi.color-active: argb:0000000, #3bc9db, argb:00000000, argb:99000000, #fd7e14
-rofi.color-urgent: argb:0000000, #fa5252, argb:00000000, argb:99000000, #fd7e14
+rofi.color-urgent: argb:0000000, #fa5252, argb:00000000, #99000000, #fd7e14

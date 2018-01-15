@@ -19,7 +19,7 @@
 
 ! yellow
 *color3: #fab005
-*color11: #ffd43b 
+*color11: #ffd43b
 
 ! blue
 *color4: #228ae6
@@ -68,9 +68,10 @@ urxvt*cursorBlink: true
 ! gimme juicy transparency
 ! and get the color right
 urxvt*depth: 32
-urxvt*background: [80]#000000
+urxvt*background: #212121
 urxvt*foreground: #dfdfdf
 URxvt*intensityStyles: false
 
 ! padd it
-URxvt*internalBorder: 10
+URxvt*internalBorder: 15
+
