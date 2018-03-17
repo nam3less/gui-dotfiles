@@ -10,9 +10,9 @@ devmon &
 session=${1:-bspwm}
 
 case $session in
-	i3|i3wm		) exec i3;;
-	kde			) exec startkde;;
-	xfce|xfce4	) exec startxfce4;;
-    bspwm       ) exec bspwm;;
-	*			) ;;
+	i3|i3wm		 ) exec i3;;
+	kde			   ) exec startkde;;
+	xfce|xfce4 ) exec startxfce4;;
+  bspwm      ) exec bspwm;;
+	*			     ) ;;
 esac
