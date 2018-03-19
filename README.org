@@ -1,0 +1,13 @@
+* Gui dotfiles
+This is one of two parts of my configuration. As the name suggests, this
+repository tracks the configuration of all things graphical.
+** Requirements
+ At the moment this config support i3-gaps and bspwm. This means i3-gaps or 
+ bspwm+sxhkd need to be installed, in addtion to the following packages.
+ - compton
+ - rxvt-unicode
+ - rofi
+ rxvt-unicode and rofi can be substituted using similar packages, for example
+ termite and dmenu
+ 
+ Furthermore polybar can be used to provide a status bar.

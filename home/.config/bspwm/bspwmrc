@@ -1,11 +1,15 @@
 #! /bin/sh
-
 sxhkd &
 compton --config ~/.config/compton.conf &
-xinput set-prop 12 274 1 &
 feh --no-fehbg --bg-fill ~/Wallpapers/female_deathknight.jpg &
+# xinput set-prop 12 274 1 &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor HDMI-0 -d I II III IV V 
+bspc monitor DVI-1 -d VI VII VIII IX X
+
+bspc config pointer_modifier mod1
+bspc config pointer_action1 resize_side
+bspc config click_to_focus button1
 
 bspc config border_width         5
 bspc config window_gap          15

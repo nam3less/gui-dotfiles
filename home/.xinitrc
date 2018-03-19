@@ -2,7 +2,7 @@ xrdb -merge ~/.Xresources
 
 setxkbmap -layout de,us
 setxkbmap -option caps:escape
-xinput set-prop 12 276 1
+# xinput set-prop 12 276 1
 
 urxvtd &
 devmon &
