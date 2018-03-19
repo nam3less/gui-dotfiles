@@ -1,6 +1,6 @@
 xrdb -merge ~/.Xresources
 
-setxkbmap -layout de,us
+setxkbmap -layout us,de
 setxkbmap -option caps:escape
 # xinput set-prop 12 276 1
 
