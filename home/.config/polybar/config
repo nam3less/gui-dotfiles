@@ -1,5 +1,5 @@
 [colors]
-background = #99000000
+background = #88000000
 background-alt = #444
 
 foreground = #dfdfdf
@@ -10,12 +10,8 @@ alert = #bd2c4
 
 [bar/laptop]
 monitor = eDP1
-width = 1600
-height = 26
-
-border-size = 10
-border-bottom-size = 0
-border-color = #00000000
+width = 1920
+height = 30
 
 padding-left = 0
 padding-right = 2
@@ -24,16 +20,17 @@ line-size = 2
 
 background = ${colors.background}
 
-modules-left = i3
+modules-left = xmonad
 modules-center = date
-modules-right = wifi battery
+modules-right = wifi volume brightness battery
 
 module-margin = 1
 
 tray-position = right
 
-font-0 = "Hack:size12;2"
-font-1 = "FontAwesome:size13;2"
+font-0 = "Hack:size10;2"
+font-1 = "FontAwesome:size10;2"
+font-2 = "Noto Sans:size10;2"
 
 
 [bar/left]
@@ -94,10 +91,16 @@ font-1 = "FontAwesome:size14;2"
 
 
 [global/wm]
-monitor =
 margin-bottom = 0
 margin-top = 0
 
+[setting]
+screenchange-reload = true
+
+[module/xmonad]
+type = custom/script
+exec = xmonad-log
+tail = true
 
 [module/i3]
 type = internal/i3
@@ -140,7 +143,7 @@ label-empty-foreground = #44ffffff
 
 [module/wifi]
 type = internal/network
-interface = wlp2s0
+interface = wlp4s0
 
 label-connected = %essid%
 label-connected-foreground = #eefafafa
@@ -161,6 +164,28 @@ label = %title:0:30:...% %{B- -o -u}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 
+[module/volume]
+type = internal/pulseaudio
+interval = 5
+format = <ramp-volume> <label-volume>
+; display muted
+label-muted = 🔇 muted
+label-muted-foreground = #666
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+[module/backlight]
+type = internal/backlight
+card = intel-backlight
+format = <ramp> <label>
+; Ramp labels
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑

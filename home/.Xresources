@@ -53,8 +53,8 @@ Xft.embeddedbitmap: 0
 !#------------------------------------------------#
 
 ! font
-URxvt*font: xft:Hack:style=light:size=11
-URxvt*boldFont: xft:Hack:style=reguler:size=11
+URxvt*font: xft:Hack:style=light:size=11,xft:Noto Sans:size=11
+URxvt*boldFont: xft:Hack:style=reguler:size=11,xft:Noto Sans:size=11
 URxvt*lineSpace: 0
 URxvt*letterSpace: -1
 
