@@ -1,3 +1,12 @@
+configuration {
+    mode: "window,drun,ssh,run";
+    show-icons: true;
+    kb-row-up: "Up,Control+k,Control+p,ISO_Left_Tab";
+    kb-row-down: "Down,Control+j,Control+n";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-accept-entry: "Control+m,Return,KP_Enter";
+}
+
 * {
     font:                "Hack 12";
     foreground:          rgba ( 180, 180, 180, 100% );
@@ -14,6 +23,7 @@
     separatorcolor:      @foreground;
     background-color:    @transparent;
 }
+
 #window {
     background-color: @background;
     fullscreen:       true;
@@ -21,18 +31,22 @@
     border:           0;
     padding:          200px 300px;
 }
+
 #mainbox {
     border:  0;
     padding: 0;
 }
+
 #message {
     border:       1px dash 0px 0px ;
     border-color: @separatorcolor;
     padding:      1px ;
 }
+
 #textbox {
     text-color: @foreground;
 }
+
 #listview {
     lines:        15;
     columns:      3;
@@ -43,35 +57,44 @@
     padding:      20px 0px 0px ;
     dynamic:      true;
 }
+
 #element {
     background-color: @transparent;
     border:  0;
     padding: 5px ;
 }
+
 #element.normal.normal {
     text-color:       @foreground;
 }
+
 #element.normal.urgent {
     text-color:       @urgent-foreground;
 }
+
 #element.normal.active {
     text-color:       @active-foreground;
 }
+
 #element.selected {
     text-color:       @selected-foreground;
     border: 0 0 1 0;
     border-color: @selected-foreground;
 
 }
+
 #element.alternate.normal {
     text-color:       @foreground;
 }
+
 #element.alternate.urgent {
     text-color:       @urgent-foreground;
 }
+
 #element.alternate.active {
     text-color:       @active-foreground;
 }
+
 #scrollbar {
     width:        4px;
     border:       0;
@@ -79,32 +102,41 @@
     handle-width: 8px ;
     padding:      0;
 }
+
 #sidebar {
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
 }
+
 #button {
     spacing:    0;
     text-color: @foreground;
 }
+
 #button.selected {
     background-color: @transparent;
     text-color:       @selected-foreground;
 }
+
 #inputbar {
     spacing:    0;
     text-color: @foreground;
     padding:    5px ;
 }
+
 #case-indicator {
     spacing:    0;
     text-color: @foreground;
 }
+
 #entry {
     spacing:    0;
     text-color: @foreground;
 }
+
 #prompt {
+    enabled: false;
     spacing:    0;
+    padding: 0 20px 0 0;
     text-color: @foreground;
 }

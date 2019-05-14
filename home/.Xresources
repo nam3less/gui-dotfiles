@@ -62,16 +62,16 @@ URxvt*letterSpace: -1
 URxvt*scrollBar: false
 
 ! luv me my blinking underscore cursor
-urxvt*cursorUnderline: true
-urxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+URxvt*cursorBlink: true
 
 ! gimme juicy transparency
 ! and get the color right
-urxvt*depth: 32
-urxvt*background: #212121
-urxvt*foreground: #dfdfdf
+URxvt*depth: 24
+URxvt*background: #212121
+URxvt*foreground: #dfdfdf
 URxvt*intensityStyles: false
 
 ! padd it
-URxvt*internalBorder: 15
+URxvt*internalBorder: 20
 

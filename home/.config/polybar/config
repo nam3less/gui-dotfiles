@@ -1,5 +1,5 @@
 [colors]
-background = #88000000
+background = #212121
 background-alt = #444
 
 foreground = #dfdfdf
@@ -22,15 +22,15 @@ background = ${colors.background}
 
 modules-left = xmonad
 modules-center = date
-modules-right = wifi volume brightness battery
+modules-right = volume battery
 
 module-margin = 1
 
 tray-position = right
 
-font-0 = "Hack:size10;2"
-font-1 = "FontAwesome:size10;2"
-font-2 = "Noto Sans:size10;2"
+font-0 = "Hack:size=12;2"
+font-1 = "Ionicons:size=16;2"
+font-2 = "Noto Sans:size=12;2"
 
 
 [bar/left]
@@ -102,6 +102,11 @@ type = custom/script
 exec = xmonad-log
 tail = true
 
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -167,25 +172,36 @@ type = internal/battery
 battery = BAT0
 adapter = ACAD
 
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+; Charge icon
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
+; Ramp icons
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
 [module/volume]
 type = internal/pulseaudio
 interval = 5
-format = <ramp-volume> <label-volume>
+format-volume = <ramp-volume> <label-volume>
 ; display muted
-label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
-
-[module/backlight]
-type = internal/backlight
-card = intel-backlight
-format = <ramp> <label>
-; Ramp labels
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
